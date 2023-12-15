@@ -82,16 +82,13 @@
             <ul class="nav justify-content-center">
 
             </ul>
-            <p class="text-center text-muted p-footer"> © <span id="currentYear"></span> CMIS Construcciones </p>
+            <p class="text-center text-muted p-footer"> © <span id="currentYear">{{now()->year}}</span> CMIS Construcciones </p>
 
           </footer>
         </div>
       </div>
 
       <!-- Footer -->
-    
-
-    
     
   </body>
 </html>

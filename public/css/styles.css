@@ -37,9 +37,10 @@ body {
     
 }
 
-.p-footer{
+.p-footer span{
     color: whitesmoke !important;
 }
+
 
 .card-container{
     display: flex;
@@ -120,6 +121,11 @@ body {
     hover{
         cursor: pointer;
     }
+}
+
+.carrusel{
+    padding: 15px;
+    text-align: center;
 }
 
 .dropdown-menu {

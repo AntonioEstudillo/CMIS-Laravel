@@ -3,7 +3,7 @@
 @section('contenido')
 <div class="d-md-flex justify-content-md-center gap-3 align-items-md-center">
     <div class="col-md-6 p-5">
-        <img src="{{asset('img/registrar.jpg')}}" alt="Imagen registrar" class="img-fluid">
+        <img src="{{asset('assets/CMIS-full-blue.png')}}" alt="Imagen registrar" class="img-fluid">
     </div>
 
     <div class="col-md-4 bg-white p-4 rounded shadow-lg">

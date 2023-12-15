@@ -58,7 +58,7 @@
                 <img src="/assets/construccion.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                   <p class="card-text">Construye tus sueños con nosotros: CMIS Construcciones, tu socio confiable en proyectos de construcción y obras civiles.</p>
-                  <a href="/HTML/servicios.html" class="btn btn-primary">Ver más</a>
+                  <a href="{{route('servicios')}}" class="btn btn-primary">Ver más</a>
                 </div>
               </div>
 
@@ -70,7 +70,7 @@
                 <img src="/assets/electricista-de-confianza.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                   <p class="card-text">Instala innovación y calidad en cada rincón</p> <br> <br>
-                  <a href="/HTML/servicios.html" class="btn btn-primary">Ver más</a>
+                  <a href="{{route('servicios')}}" class="btn btn-primary">Ver más</a>
                 </div>
               </div>
 
@@ -82,7 +82,7 @@
                 <img src="/assets/Beneficios-del-mantenimiento-preventivo-del-aire-acondicionado-Macrofilter-1.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                   <p class="card-text">Explora nuestros servicios de alta calidad y experimenta la excelencia en cada detalle.</p> <br>
-                  <a href="/HTML/servicios.html" class="btn btn-primary">Ver más</a>
+                  <a href="{{route('servicios')}}" class="btn btn-primary">Ver más</a>
                 </div>
               </div>
 

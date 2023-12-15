@@ -16,36 +16,28 @@
 
       <div class="container contactForm my-4">
         <br>
-        <form>
+        <form id="emailForm">
+          <div class="form-group">
+            <label for="name">Nombre</label>
+            <input type="text" class="form-control" id="name" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="email">Correo Electrónico</label>
+            <input type="email" class="form-control" id="email" placeholder="{{ auth()->user()->email }}">
+            <input type="hidden" name="email" value="{{ auth()->user()->email }}">
 
-
-            <div class="form-group">
-                <label for="exampleFormControlInput1">Nombre</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="">
-              </div>
-              
-              <div class="form-group">
-                  <label for="exampleFormControlInput1">Correo Electronico</label>
-                  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="{{auth()->user()->email}}">
-                </div>
-                
-                
-            <div class="form-group">
-                <label for="exampleFormControlInput1">Número Telefonico</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="">
-                </div>
-              <label for="exampleFormControlTextarea1">Cuentanos en que podemos ayudarte</label>
-              <textarea class="form-control textAreaa" id="exampleFormControlTextarea1" rows="3"></textarea>
-                <br>
-              
-
-                <div class="d-grid gap-2 col-6 mx-auto">
-                    <button class="btn btn-secondary" type="button">Enviar</button>
-                  </div>       
-                  <br>       
-                  
-
-            </form>
+        </div>
+        <div class="form-group">
+            <label for="phone">Número Telefónico</label>
+            <input type="text" class="form-control" id="phone" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="message">Cuéntanos en qué podemos ayudarte</label>
+            <textarea class="form-control" id="message" rows="3"></textarea>
+        </div>
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <button class="btn btn-secondary" type="button">Enviar</button>
+        </div>
 
         </div>
 
@@ -69,27 +61,5 @@
             </div>
 
 
-        </div>
-        
-      
-     
-
-      <!-- Content  -->
-
-
-      <!-- Footer -->
-
-      <div class="container-fluid">
-
-        <div class="row">
-          <footer id="footer" class="py-3">
-
-            <ul class="nav justify-content-center">
-
-            </ul>
-            <p class="text-center text-muted p-footer"> © <span id="currentYear"></span> CMIS Construcciones </p>
-
-          </footer>
-        </div>
-      </div>
+        </div>     
 @endsection

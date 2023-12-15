@@ -2,57 +2,37 @@
 
 namespace App\Mail;
 
-//use Faker\Provider\ar_EG\Address;
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
-use Illuminate\Mail\Mailables\Content;
-use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
-use Illuminate\Mail\Mailables\Address;
-
 
 class MisCorreos extends Mailable
 {
     use Queueable, SerializesModels;
 
-    /**
-     * Create a new message instance.
-     */
-    public function __construct(private $name)
+    public $name;
+    public $email;
+    public $phone;
+    public $message;
+
+    public function __construct($name, $email, $phone, $message)
     {
-        //
+        $this->name = $name;
+        $this->email = $email;
+        $this->phone = $phone;
+        $this->message = $message;
     }
 
-    /**
-     * Get the message envelope.
-     */
-    public function envelope(): Envelope
+    public function build()
     {
-        return new Envelope(
-            from: new Address('example@example.com', 'Test Sender'),
-            subject: 'Correo desde la web',
-        );
-    }
-
-    /**
-     * Get the message content definition.
-     */
-    public function content(): Content
-    {
-        return new Content(
-            view: 'mail.correos',
-            with: ['name' => $this->name]
-        );
-    }
-
-    /**
-     * Get the attachments for the message.
-     *
-     * @return array<int, \Illuminate\Mail\Mailables\Attachment>
-     */
-    public function attachments(): array
-    {
-        return [];
+        return $this->from('your@example.com') // Remitente
+                    ->subject('Asunto del correo') // Asunto
+                    ->view('mail.correos') // Vista del correo
+                    ->with([
+                        'name' => $this->name,
+                        'email' => $this->email,
+                        'phone' => $this->phone,
+                        'message' => $this->message,
+                    ]); // Datos a pasar a la vista del correo
     }
 }

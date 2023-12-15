@@ -37,10 +37,10 @@ Route::post('/crear-cuenta', [CrearCuentaController::class, 'store']);
 
 Route::post('/logout', [LogoutController::class, 'store'])->name('logout');
 
-Route::get('/correo',function(){
-    $name = 'hola';
-    Mail::to('jesusestudillo123@gmail.com')->send(new MisCorreos($name));
-});
+// Route::get('/correo',function(){
+//     $name = 'hola';
+//     Mail::to('jesusestudillo123@gmail.com')->send(new MisCorreos($name));
+// });
 
 
 
