@@ -1,66 +1,34 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Sitio web de CMIS Construcciones
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Este proyecto contiene el código fuente y diversos recursos utilizados para desarrollar el sitio web oficial de CMIS Construcciones. La página web está diseñada para mostrar nuestros servicios, proyectos anteriores y proporcionar información de contacto.  
 
-## About Laravel
+[![collage.jpg](https://i.postimg.cc/kM8ST8X8/collage.jpg)](https://postimg.cc/6TWT38Z5)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+El sitio web fue desarrollado utilizando:
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- Laravel - Framework PHP utilizado como base para el desarrollo.
+- HTML5 - Para la estructura y contenido del sitio.  
+- CSS - Para los estilos y diseño visual. 
+- JavaScript - Para funcionalidades dinámicas y efectos.
+- Bootstrap - Framework CSS para un diseño responsive.  
 
-## Learning Laravel
+Adicionalmente, se utilizó Mailgun para implementar la funcionalidad de verificación de correo electrónico en el formulario de contacto.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+El sitio permite a los visitantes:
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+- Conocer los servicios de construcción y mantenimiento que ofrece la empresa. 
+- Ver una galería de proyectos y trabajos realizados previamente.   
+- Leer la historia y trayectoria de CMIS Construcciones.
+- Ponerse en contacto para solicitar cotizaciones de trabajos.  
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Los usuarios registrados tienen acceso a:  
 
-## Laravel Sponsors
+- Un panel de control para gestionar solicitudes y cotizaciones.  
+- Capacidad para publicar nuevos proyectos realizados.  
+- Crear cuentas e iniciar sesión dentro del sistema
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+El código está documentado apropiadamente y utiliza las mejores prácticas para un desarrollo seguro y escalable.
 
-### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+[![Captura-de-pantalla-de-2024-01-02-23-02-21.png](https://i.postimg.cc/J0w1yGfC/Captura-de-pantalla-de-2024-01-02-23-02-21.png)](https://postimg.cc/vgzRkH80)
