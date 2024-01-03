@@ -9,19 +9,16 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class MisCorreos extends Mailable
+class CorreoContacto extends Mailable
 {
     use Queueable, SerializesModels;
-  
-  
-    public $data;
 
     /**
      * Create a new message instance.
      */
-    public function __construct($data)
+    public function __construct()
     {
-        $this->data = $data;
+        //
     }
 
     /**

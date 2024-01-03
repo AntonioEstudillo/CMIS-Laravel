@@ -13,18 +13,23 @@ class ContactoController extends Controller
         return view('contacto');
     }
 
-    public function sendEmail(Request $request)
+    public function store(Request $request)
     {
-        // Lógica para obtener los datos del formulario
-        $name = $request->input('name');
-        $email = $request->input('email');
-        $phone = $request->input('phone');
-        $message = $request->input('message');
+        $request->validate([
+          'name'=> 'required',
+          'telefono'=>'numeric',
+          'mensaje'=>'required'
+        ]);
 
         // Envío del correo utilizando la clase MisCorreos
-        Mail::to('jesusestudillo123@gmail.com')->send(new MisCorreos($name, $email, $phone, $message));
+        Mail::to('jesusestudillo123@gmail.com')->send(new MisCorreos($request->all()));
+       
+      
+        toastify()->success('¡El correo se envío correctamente!', ['duration' => 5000]);
+        
 
-        // Redirigir o devolver una respuesta según sea necesario
+        return view('contacto');
+
     }
 
 }

@@ -36,18 +36,18 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1 class="title">Solicitud de días de luto</h1>
+            <h1 class="title">Solicitud de información</h1>
         </div>
         <div class="content">
-            <p>Estimado [Nombre del destinatario],</p>
-            <p>Nos complace informarle que hemos perdido a [Nombre del fallecido].</p>
-            <p>Nos gustaría solicitaros que nos otorguen dos días de luto por fallecimiento de abuela materna.</p>
-            <p>Agradecemos de antemano su atención a este asunto y quedamos a la espera de su respuesta favorable.</p>
+            <p>Nombre del usuario: {{$data['name']}},</p>
+            <p>Correo electronico del usuario: {{$data['email']}}</p>
+            <p>Telefono del usuario: {{$data['telefono']}}</p>
+            <p> {{$data['mensaje']}} </p>
         </div>
         <div class="footer">
-            Telefono: [Número de teléfono]<br>
-            Correo electrónico: [Correo electrónico]
+            CMIS 2024
         </div>
     </div>
 </body>
 </html>
+

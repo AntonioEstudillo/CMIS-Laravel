@@ -1,13 +1,13 @@
 @extends('layouts.app')
 
 @section('contenido')
-
+@auth
       <div class="container mt-2">
 
         <div class="row">
 
             <h1 class="text-center serviceTitle">Conctactanos</h1>
-            <img src="../assets/CMIS-full-blue.png" class="logoContacto centeredImage mb-3" alt="logoCmis">
+         
             <h3 class="display-6 text-center">¿Necesitas una cotización o atención personalizada?</h3>
 
         </div>
@@ -16,27 +16,46 @@
 
       <div class="container contactForm my-4">
         <br>
-        <form id="emailForm">
+        <form id="emailForm" action="{{route('contacto')}}" method="POST">
+          @csrf
           <div class="form-group">
             <label for="name">Nombre</label>
-            <input type="text" class="form-control" id="name" placeholder="">
+            <input type="text" class="form-control" name="name" placeholder="Ejemplo: {{auth()->user()->name}}">
         </div>
+          @error('name')
+          <p>
+            {{$message}}
+          </p>
+          @enderror
+          
         <div class="form-group">
             <label for="email">Correo Electrónico</label>
-            <input type="email" class="form-control" id="email" placeholder="{{ auth()->user()->email }}">
+            <input type="email" class="form-control" id="email" value="{{ auth()->user()->email }}" readonly>
             <input type="hidden" name="email" value="{{ auth()->user()->email }}">
-
         </div>
+          
         <div class="form-group">
             <label for="phone">Número Telefónico</label>
-            <input type="text" class="form-control" id="phone" placeholder="">
+            <input type="text" name="telefono" class="form-control" id="telefono" placeholder="">
         </div>
+          @error('telefono')
+          <p>
+            {{$message}}
+          </p>
+          @enderror
+          
         <div class="form-group">
             <label for="message">Cuéntanos en qué podemos ayudarte</label>
-            <textarea class="form-control" id="message" rows="3"></textarea>
+            <textarea class="form-control" id="mensaje" name="mensaje" rows="3"></textarea>
         </div>
+          @error('mensaje')
+          <p>
+            {{$message}}
+          </p>
+          @enderror
+          
         <div class="d-grid gap-2 col-6 mx-auto">
-            <button class="btn btn-secondary" type="button">Enviar</button>
+            <button class="btn btn-secondary" type="submit">Enviar</button>
         </div>
 
         </div>
@@ -61,5 +80,33 @@
             </div>
 
 
-        </div>     
+        </div>
+        <script>
+  if ('{{ session("success") }}') {
+    toastify.success("{{ session("success") }}");
+  }
+</script>
+
+        
+
+@endauth
+      
+@guest
+        
+@section('rutas')
+  <link  href="{{asset('css/contacto-invitado.css')}}" rel="stylesheet">
+@endsection
+<div class="container">
+  
+  <div class="left-section">
+    <img src="{{asset('assets/CMIS-full-blue.png')}}" alt="Imagen de fondo">
+  </div>
+
+  <div class="right-section">
+    <h1>Inicia sesión o crea una cuenta para poder contactarnos</h1>
+    <a class="btn btn-primary" href="{{route('login')}}">Iniciar sesión</a>
+  </div>
+</div>
+  
+@endguest
 @endsection
